@@ -1,12 +1,13 @@
 import React from 'react';
 import GetInvolvedPage from "@/pages/getInvolved/GetInvolvedPage";
 import { CloudWatchLogger } from '@/utils/CloudwatchLoggerUtil';
+import {config} from "@/config";
 
 const log = new CloudWatchLogger(
-    'YOUR_AWS_REGION',
-    'YOUR_IDENTITY_POOL_ID',
-    'MyReactAppLogs',
-    'AppLogs'
+    config.cloudWatchRegion,
+    config.cloudWatchIdentityPoolId,
+    'FacegovReactAppLogs',
+    'HomePage'
 );
 
 const HomePage: React.FC = () => {

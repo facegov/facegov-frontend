@@ -1,0 +1,48 @@
+name: Deploy to S3
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # or your preferred Node.js version
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create env file
+        run: |
+          echo "AWS_APIGATEWAY_USER_REGISTRATION_URL=${{ secrets.AWS_APIGATEWAY_USER_REGISTRATION_URL }}" >> .env
+          echo "REACT_APP_USER_POOL_ID=${{ secrets.COGNITO_USER_POOL_ID }}" >> .env
+          echo "REACT_APP_CLIENT_ID=${{ secrets.COGNITO_CLIENT_ID }}" >> .env
+
+      - name: Build
+        run: npm run build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: ${{ secrets.AWS_ARN_ROLE }}
+          aws-region: eu-west-2
+
+      - name: Sync files to S3
+        run: |
+          aws s3 sync build/ s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete
+    
+          # aws s3 sync build/ s3://your-bucket-name --delete
+              # Optional: Invalidate CloudFront distribution
+              # aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths "/*"

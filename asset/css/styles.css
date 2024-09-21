@@ -1,0 +1,107 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+h1 {
+    text-align: center;
+}
+
+.mission-point {
+    background-color: #fff;
+    border-left: 5px solid #3498db;
+    margin-bottom: 15px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.mission-point:hover {
+    transform: translateX(10px);
+}
+
+.highlight {
+    background-color: #f39c12;
+    padding: 2px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#infoBox {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+#closeInfo {
+    float: right;
+    cursor: pointer;
+}
+
+
+#get-involved {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+#get-involved h3 {
+    color: #2980b9;
+}
+
+#get-involved h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#get-involved ul {
+    padding-left: 20px;
+}
+
+#get-involved li {
+    margin-bottom: 10px;
+}
+
+#get-involved a {
+    color: #2980b9;
+    text-decoration: none;
+    border-bottom: 1px solid #2980b9;
+}
+
+#get-involved a:hover {
+    color: #3498db;
+    border-bottom-color: #3498db;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+footer a {
+    color: #7f8c8d;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

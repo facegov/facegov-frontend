@@ -1,0 +1,38 @@
+== FaceGov Frontend repository
+
+== Repository Structure
+Preview
+Code
+
+graph TD
+    A[Project Root] --> B[src/]
+    A --> C[static/]
+    A --> D[pom.xml]
+    B --> E[main/]
+    B --> F[test/]
+    E --> G[java/]
+    E --> H[resources/]
+    C --> I[index.html]
+    C --> J[assets/]
+    J --> K[css/]
+    J --> L[js/]
+    J --> M[images/]
+
+
+== Testing
+
+[source, json]
+----
+{
+  "username": "testuser",
+  "email": "test@example.com",
+  "password": "password123"
+}
+----
+
+== Clear Project cache and node modules
+try cleaning your project's build cache and node modules:
+Copyrm -rf node_modules
+rm -rf build
+npm cache clean --force
+npm install

@@ -11,8 +11,7 @@ const log = new CloudWatchLogger(
 );
 
 const HomePage: React.FC = () => {
-
-    log.info("Home Page")
+    log.info("Home Page");
 
     return(<>
         <GetInvolvedPage />

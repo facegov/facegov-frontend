@@ -7,7 +7,7 @@ const MiscommunicationPage: React.FC = () => {
 
     return (
         <div className="container mx-auto mt-8">
-            <h1 className="text-3xl font-bold mb-6">Top 10 miscommunication</h1>
+            <h1 className="text-3xl font-bold mb-6">Miscommunication</h1>
             <FactChecksMenu/>
             <p>TODO</p>
         </div>

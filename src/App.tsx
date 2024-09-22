@@ -18,6 +18,8 @@ import {I18nextProvider} from 'react-i18next';
 import i18n from './i18n';
 import AWS from 'aws-sdk';
 import {config} from "@/config";
+import ElectionsPage from "@/pages/politicians/ElectionsPage";
+import ParliamentPage from "@/pages/politicians/ParliamentPage";
 
 // Configure AWS SDK
 AWS.config.update({
@@ -100,14 +102,16 @@ const App: React.FC = () => {
                 <div className="min-h-screen bg-gray-100">
                     <Header isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen}/>
 
-                    <div className="container mx-auto mt-6 px-4 md:px-0 flex flex-col md:flex-row">
-                        <Menu/>
-                        <main className="w-full md:w-1/2 md:px-4">
+                    <div className="container mx-auto mt-6 px-4 md:px-0">
+
+                        <main className="w-full">
                             <Routes>
                                 <Route path="/" element={<HomePage/>}/>
                                 <Route path="/fact-checks" element={<FactChecksPage/>}/>
                                 <Route path="/login" element={<LoginPage/>}/>
                                 <Route path="/politicians" element={<PoliticiansPage/>}/>
+                                <Route path="/elections" element={<ElectionsPage/>}/>
+                                <Route path="/parliament" element={<ParliamentPage/>}/>
                                 <Route path="/community" element={<Community/>}/>
                                 <Route path="/activists" element={<ActivistsPage/>}/>
                                 <Route path="/open-source" element={<GetInvolvedPage/>}/>
@@ -117,7 +121,7 @@ const App: React.FC = () => {
                                 <Route path="*" element={<Navigate to="/" replace/>}/>
                             </Routes>
                         </main>
-                        <RightSidebar/>
+
                     </div>
                 </div>
             </Router>

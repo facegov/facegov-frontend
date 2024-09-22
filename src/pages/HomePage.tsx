@@ -4,7 +4,7 @@ import { CloudWatchLogger } from '@/utils/CloudwatchLoggerUtil';
 import {config} from "@/config";
 
 const log = new CloudWatchLogger(
-    config.cloudWatchRegion,
+    'us-east-1',
     config.cloudWatchIdentityPoolId,
     'FacegovReactAppLogs',
     'HomePage'

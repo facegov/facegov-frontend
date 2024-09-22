@@ -26,6 +26,7 @@ jobs:
 
       - name: Create env file
         run: |
+          echo "REACT_APP_AWS_ARN_ROLE=${{ secrets.AWS_ARN_ROLE }}" >> .env
           echo "REACT_APP_AWS_APIGATEWAY_USER_REGISTRATION_URL=${{ secrets.AWS_APIGATEWAY_USER_REGISTRATION_URL }}" >> .env
           echo "REACT_APP_AWS_CLOUDWATCH_REGION=${{ secrets.AWS_CLOUDWATCH_REGION }}" >> .env
           echo "REACT_APP_AWS_CLOUDWATCH_IDENTITY_POOL_ID=${{ secrets.AWS_CLOUDWATCH_IDENTITY_POOL_ID }}" >> .env

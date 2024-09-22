@@ -9,8 +9,7 @@ const FactChecksPage: React.FC = () => {
     return (
         <div className="container mx-auto mt-8">
             <FactChecksMenu/>
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Fact Checks</h1>
-            <PrototypeDisclaimer/>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Fact Check</h1>
         </div>
     );
 };

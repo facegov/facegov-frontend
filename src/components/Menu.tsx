@@ -14,25 +14,25 @@ const Menu: React.FC = () => (
             <li>
                 <Link to="/fact-checks" className="flex items-center">
                     <Icons name="barChart"/>
-                    <span className="hidden md:inline ml-2">Fact Checks</span>
+                    <span className="inline ml-2">Fact Checks</span>
                 </Link>
             </li>
             <li>
                 <Link to="/community" className="flex items-center">
                     <Icons name="community"/>
-                    <span className="hidden md:inline ml-2">Community</span>
+                    <span className="inline ml-2">Community</span>
                 </Link>
             </li>
             <li>
                 <Link to="/activists" className="flex items-center">
                     <Icons name="activists"/>
-                    <span className="hidden md:inline ml-2">Activists</span>
+                    <span className="inline ml-2">Activists</span>
                 </Link>
             </li>
             <li>
                 <Link to="/politicians" className="flex items-center">
                     <Icons name="politicians"/>
-                    <span className="hidden md:inline ml-2">Politicians</span>
+                    <span className="inline ml-2">Politicians</span>
                 </Link>
             </li>
         </ul>

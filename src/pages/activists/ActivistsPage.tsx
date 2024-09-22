@@ -6,9 +6,7 @@ import PrototypeDisclaimer from "@/components/PrototypeDisclaimer";
 const ActivistsPage: React.FC = () => {
     return (
         <div className="container mx-auto mt-8">
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Activists Zone</h1>
-            <PrototypeDisclaimer/>
-
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Activists</h1>
             <p className="text-xl text-gray-700">This is your launchpad for grassroots political action. Here, you can
                 connect with like-minded individuals in your area, form local groups, and coordinate efforts to drive
                 real change in your community and beyond. Whether you are fighting for environmental protection, social

@@ -32,7 +32,7 @@ const Menu: React.FC = () => (
             <li>
                 <Link to="/fact-checks" className="flex flex-col items-center">
                     <Icons name="barChart"/>
-                    <span className="ml-2 mr-2">Fact Checks</span>
+                    <span className="ml-2 mr-2">Fact Check</span>
                 </Link>
             </li>
         </ul>

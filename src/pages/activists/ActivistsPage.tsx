@@ -1,7 +1,6 @@
 import React from 'react';
 import ProposalsPage from "@/pages/activists/ProposalsPage";
 import TerritorialGroupPage from "@/pages/activists/TerritorialGroupPage";
-import PrototypeDisclaimer from "@/components/PrototypeDisclaimer";
 
 const ActivistsPage: React.FC = () => {
     return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import PrototypeDisclaimer from "@/components/PrototypeDisclaimer";
 import PoliticiansMenu from "@/pages/politicians/PoliticiansMenu";
 
 

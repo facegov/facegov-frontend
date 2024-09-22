@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import PrototypeDisclaimer from "@/components/PrototypeDisclaimer";
 import PoliticiansMenu from "@/pages/politicians/PoliticiansMenu";
-import { Search } from 'lucide-react';
+import {Search} from 'lucide-react';
 
 const candidatesData = [
-    { id: 1, name: 'Jane Doe', party: 'Progressive Party', platform: 'Education reform and environmental protection' },
-    { id: 2, name: 'John Smith', party: 'Conservative Party', platform: 'Economic growth and tax cuts' },
-    { id: 3, name: 'Alice Johnson', party: 'Centrist Alliance', platform: 'Healthcare reform and social justice' },
+    {id: 1, name: 'Jane Doe', party: 'Progressive Party', platform: 'Education reform and environmental protection'},
+    {id: 2, name: 'John Smith', party: 'Conservative Party', platform: 'Economic growth and tax cuts'},
+    {id: 3, name: 'Alice Johnson', party: 'Centrist Alliance', platform: 'Healthcare reform and social justice'},
 ];
 
 interface Candidate {
@@ -16,7 +16,7 @@ interface Candidate {
     platform: string;
 }
 
-const CandidateCard: React.FC<{candidate : Candidate}> = ({ candidate }) => (
+const CandidateCard: React.FC<{ candidate: Candidate }> = ({candidate}) => (
     <div className="bg-white shadow-md rounded-lg p-6 mb-4">
         <h3 className="text-xl font-bold mb-2">{candidate.name}</h3>
         <p className="text-gray-600 mb-2">Party: {candidate.party}</p>
@@ -35,8 +35,8 @@ const ElectionsPage: React.FC = () => {
 
     return (
         <div className="container mx-auto mt-8">
-            <PoliticiansMenu/>
             <h1 className="text-3xl font-bold text-center mb-8">Upcoming Election Information</h1>
+            <PoliticiansMenu/>
             <PrototypeDisclaimer/>
 
             <p className="text-xl text-gray-700">Get to know the candidates... </p>

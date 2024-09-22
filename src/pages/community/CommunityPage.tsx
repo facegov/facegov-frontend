@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import PrototypeDisclaimer from "@/components/PrototypeDisclaimer";
+import CommunityMenu from "@/pages/community/CommunityMenu";
 
-const Community: React.FC = () => {
+const CommunityPage: React.FC = () => {
     const [threads] = useState([
         {id: 1, title: 'Climate Change Policy', author: 'EcoWarrior', replies: 23},
         {id: 2, title: 'Education Reform Ideas', author: 'FutureTeacher', replies: 15},
@@ -11,11 +12,13 @@ const Community: React.FC = () => {
 
     return (
         <div className="container mx-auto mt-8">
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Community Zone</h1>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Community</h1>
+            <CommunityMenu/>
             <PrototypeDisclaimer/>
 
             <p className="text-xl text-gray-700">Initiate and engage in meaningful political discussions.
-                Whether you&apos;re passionate about local issues or global policies, this is your platform to share ideas,
+                Whether you&apos;re passionate about local issues or global policies, this is your platform to share
+                ideas,
                 debate perspectives,
                 and foster understanding across political divides.
                 Remember, healthy democracy thrives on diverse opinions and respectful dialogue. </p>
@@ -23,17 +26,6 @@ const Community: React.FC = () => {
             <h1 className="text-3xl font-bold mb-4">Discussion Forum</h1>
             <div className="container mx-auto mt-8">
                 <p className="mb-4">Join the conversation and shape the future of politics.</p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="bg-gray-100 p-4 rounded">
-                        <h2 className="text-2xl font-bold mb-2">Featured Discussions</h2>
-                        {/* Add featured discussions list here */}
-                    </div>
-                    <div className="bg-gray-100 p-4 rounded">
-                        <h2 className="text-2xl font-bold mb-2">Trending Topics</h2>
-                        {/* Add trending topics list here */}
-                    </div>
-                </div>
             </div>
             <div className="mb-4">
                 <input
@@ -60,4 +52,4 @@ const Community: React.FC = () => {
     );
 };
 
-export default Community;
+export default CommunityPage;

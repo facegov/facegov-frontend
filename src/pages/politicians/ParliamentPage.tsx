@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ForceGraph2D, {NodeObject, LinkObject} from 'react-force-graph-2d';
+import ForceGraph2D, {LinkObject, NodeObject} from 'react-force-graph-2d';
 import PrototypeDisclaimer from "@/components/PrototypeDisclaimer";
 import PoliticiansMenu from "@/pages/politicians/PoliticiansMenu";
 
@@ -64,11 +64,9 @@ const ParliamentPage: React.FC = () => {
 
     return (
         <div className="container mx-auto mt-8">
-            <PoliticiansMenu/>
             <h1 className="text-3xl font-bold text-center mb-8">Members of Parliament</h1>
-
+            <PoliticiansMenu/>
             <PrototypeDisclaimer/>
-
             <p className="text-xl text-gray-700">Get to know your MPs....</p>
             <ForceGraph2D
                 graphData={mpData}

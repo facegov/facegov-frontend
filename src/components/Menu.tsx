@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Icons from './Icons';
 
 const Menu: React.FC = () => (
@@ -12,27 +12,27 @@ const Menu: React.FC = () => (
             {/*    </Link>*/}
             {/*</li>*/}
             <li>
-                <Link to="/fact-checks" className="flex items-center">
-                    <Icons name="barChart"/>
-                    <span className="inline ml-2">Fact Checks</span>
-                </Link>
-            </li>
-            <li>
-                <Link to="/community" className="flex items-center">
+                <Link to="/community" className="flex flex-col items-center">
                     <Icons name="community"/>
-                    <span className="inline ml-2">Community</span>
+                    <span className="ml-3">Community</span>
                 </Link>
             </li>
             <li>
-                <Link to="/activists" className="flex items-center">
+                <Link to="/activists" className="flex flex-col items-center">
                     <Icons name="activists"/>
-                    <span className="inline ml-2">Activists</span>
+                    <span className="ml-3">Activists</span>
                 </Link>
             </li>
             <li>
-                <Link to="/politicians" className="flex items-center">
+                <Link to="/politicians" className="flex flex-col items-center">
                     <Icons name="politicians"/>
-                    <span className="inline ml-2">Politicians</span>
+                    <span className="ml-3">Politicians</span>
+                </Link>
+            </li>
+            <li>
+                <Link to="/fact-checks" className="flex flex-col items-center">
+                    <Icons name="barChart"/>
+                    <span className="">Fact Checks</span>
                 </Link>
             </li>
         </ul>

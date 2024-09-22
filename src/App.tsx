@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
+import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
 import Header from '@/components/Header';
 import HomePage from '@/pages/HomePage';
 import FactChecksPage from '@/pages/factChecks/FactChecksPage';
 import PoliticiansPage from '@/pages/politicians/PoliticiansPage';
 import {Post} from '@/types';
-import Community from "@/pages/Community";
+import CommunityPage from "@/pages/community/CommunityPage";
 import GetInvolvedPage from "@/pages/getInvolved/GetInvolvedPage";
 import AboutPage from "@/pages/AboutPage";
 import Feed from "@/components/Feed";
@@ -21,6 +21,8 @@ import ParliamentPage from "@/pages/politicians/ParliamentPage";
 import ProgressPage from "@/pages/factChecks/ProgressPage";
 import MiscommunicationPage from "@/pages/factChecks/MiscommunicationPage";
 import ProposalsPage from "@/pages/activists/ProposalsPage";
+import FeaturedDiscussionPage from "@/pages/community/FeaturedDiscussionsPage";
+import TrendingTopicsPage from "@/pages/community/TrendingTopicsPage";
 
 // Configure AWS SDK
 AWS.config.update({
@@ -48,13 +50,15 @@ const log = async (message: string, logGroupName: string, logStreamName: string)
 
     try {
         // Check if the log group exists, create if it doesn't
-        await cloudWatchLogs.createLogGroup({ logGroupName }).promise().catch(() => {});
+        await cloudWatchLogs.createLogGroup({logGroupName}).promise().catch(() => {
+        });
 
         // Check if the log stream exists, create if it doesn't
-        await cloudWatchLogs.createLogStream({ logGroupName, logStreamName }).promise().catch(() => {});
+        await cloudWatchLogs.createLogStream({logGroupName, logStreamName}).promise().catch(() => {
+        });
 
         // Get the sequence token for the log stream
-        const { logStreams } = await cloudWatchLogs.describeLogStreams({
+        const {logStreams} = await cloudWatchLogs.describeLogStreams({
             logGroupName,
             logStreamNamePrefix: logStreamName
         }).promise();
@@ -115,7 +119,9 @@ const App: React.FC = () => {
                                 <Route path="/politicians" element={<PoliticiansPage/>}/>
                                 <Route path="/elections" element={<ElectionsPage/>}/>
                                 <Route path="/parliament" element={<ParliamentPage/>}/>
-                                <Route path="/community" element={<Community/>}/>
+                                <Route path="/community" element={<CommunityPage/>}/>
+                                <Route path="/faatured-discussions" element={<FeaturedDiscussionPage/>}/>
+                                <Route path="/trending-topics" element={<TrendingTopicsPage/>}/>
                                 <Route path="/activists" element={<ActivistsPage/>}/>
                                 <Route path="/open-source" element={<GetInvolvedPage/>}/>
                                 <Route path="/about" element={<AboutPage/>}/>

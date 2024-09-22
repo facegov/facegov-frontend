@@ -1,6 +1,6 @@
 import React from 'react';
 import GetInvolvedPage from "@/pages/getInvolved/GetInvolvedPage";
-import { CloudWatchLogger } from '@/utils/CloudwatchLoggerUtil';
+import {CloudWatchLogger} from '@/utils/CloudwatchLoggerUtil';
 import {config} from "@/config";
 
 const log = new CloudWatchLogger(
@@ -13,8 +13,8 @@ const log = new CloudWatchLogger(
 const HomePage: React.FC = () => {
     log.info("Home Page");
 
-    return(<>
-        <GetInvolvedPage />
+    return (<>
+        <GetInvolvedPage/>
     </>);
 }
 

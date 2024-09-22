@@ -45,7 +45,7 @@ jobs:
       - name: Sync files to S3
         run: |
           aws s3 sync build/ s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete
-    
+          
           # aws s3 sync build/ s3://your-bucket-name --delete
               # Optional: Invalidate CloudFront distribution
               # aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths "/*"

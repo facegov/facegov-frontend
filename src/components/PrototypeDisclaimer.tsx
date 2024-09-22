@@ -3,7 +3,8 @@ import {Link} from "react-router-dom";
 
 const PrototypeDisclaimer: React.FC = () => {
     return (
-        <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-10 mt-10 rounded-md shadow-md">
+        <div
+            className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-10 mt-10 rounded-md shadow-md">
             <div className="flex">
                 <div className="flex-shrink-0">
                     <svg className="h-5 w-5 text-yellow-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"

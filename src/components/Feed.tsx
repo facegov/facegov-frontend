@@ -1,14 +1,14 @@
 import React from 'react';
 import Card from './Card';
 import Post from './Post';
-import { Post as PostType } from '@/types';
+import {Post as PostType} from '@/types';
 
 interface FeedProps {
     posts: PostType[];
 }
 
 
-const Feed: React.FC<FeedProps> = ({ posts }) => (
+const Feed: React.FC<FeedProps> = ({posts}) => (
     <>
         <Card className="mb-6">
             <div className="p-4">
@@ -21,7 +21,7 @@ const Feed: React.FC<FeedProps> = ({ posts }) => (
         </Card>
 
         {posts.map(post => (
-            <Post key={post.id} post={post} />
+            <Post key={post.id} post={post}/>
         ))}
     </>
 );

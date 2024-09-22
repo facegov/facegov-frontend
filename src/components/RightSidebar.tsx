@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import { CardContent } from "@/components/ui/card";
+import {CardContent} from "@/components/ui/card";
 import Resources from "@/Resources";
 
 const RightSidebar: React.FC = () => (

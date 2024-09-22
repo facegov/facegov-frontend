@@ -1,16 +1,7 @@
-import React, { useState } from 'react';
-import {
-    BarChart,
-    Bar,
-    XAxis,
-    YAxis,
-    Tooltip,
-    Legend,
-    ResponsiveContainer,
-    Cell,
-} from 'recharts';
-import { AlertCircle } from 'lucide-react';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import React, {useState} from 'react';
+import {Bar, BarChart, Cell, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis,} from 'recharts';
+import {AlertCircle} from 'lucide-react';
+import {Alert, AlertDescription, AlertTitle} from '@/components/ui/alert';
 
 interface DataPoint {
     category: string;
@@ -66,13 +57,13 @@ const PoliticalProgressChart: React.FC = () => {
                 <ResponsiveContainer width="100%" height="100%">
                     <BarChart
                         data={data}
-                        margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                        margin={{top: 20, right: 30, left: 20, bottom: 5}}
                         onClick={(e) => e && e.activePayload && handleBarClick(e.activePayload[0].payload)}
                     >
-                        <XAxis dataKey="category" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
+                        <XAxis dataKey="category"/>
+                        <YAxis/>
+                        <Tooltip/>
+                        <Legend/>
                         <Bar dataKey="delivered" name="Delivered Program" fill="#8884d8">
                             {data.map((entry, index) => (
                                 <Cell
@@ -96,7 +87,7 @@ const PoliticalProgressChart: React.FC = () => {
             </div>
             {selectedBar && (
                 <Alert className="mt-4">
-                    <AlertCircle className="h-4 w-4" />
+                    <AlertCircle className="h-4 w-4"/>
                     <AlertTitle>{selectedBar.category}</AlertTitle>
                     <AlertDescription>
                         <p>Delivered: {selectedBar.delivered}%</p>

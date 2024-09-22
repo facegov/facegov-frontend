@@ -17,64 +17,63 @@ import PrototypeDisclaimer from "@/components/PrototypeDisclaimer";
 // };
 
 
-
 // const userPool = new CognitoUserPool(poolData);
 
 const LoginPage: React.FC = () => {
-  console.log('User Pool ID:', process.env.REACT_APP_USER_POOL_ID);
-  console.log('Client ID:', process.env.REACT_APP_CLIENT_ID);
+    console.log('User Pool ID:', process.env.REACT_APP_USER_POOL_ID);
+    console.log('Client ID:', process.env.REACT_APP_CLIENT_ID);
 
-  // const [username, setUsername] = useState<string>('');
-  // const [password, setPassword] = useState<string>('');
-  // const [message, setMessage] = useState<string>('');
-  //
-  // const onSubmit = (event: FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  //
-  //   const authenticationDetails = new AuthenticationDetails({
-  //     Username: username,
-  //     Password: password,
-  //   });
-  //
-  //   const cognitoUser = new CognitoUser({
-  //     Username: username,
-  //     Pool: userPool
-  //   });
-  //
-  //   cognitoUser.authenticateUser(authenticationDetails, {
-  //     onSuccess: (result: CognitoUserSession) => {
-  //       const accessToken = result.getAccessToken().getJwtToken();
-  //       setMessage('Login successful!');
-  //       console.log('Access Token:', accessToken);
-  //       // Here you can redirect the user or update app state
-  //     },
-  //     onFailure: (err: any) => {
-  //       setMessage(`Login failed: ${err.message}`);
-  //     },
-  //   });
-  // };
+    // const [username, setUsername] = useState<string>('');
+    // const [password, setPassword] = useState<string>('');
+    // const [message, setMessage] = useState<string>('');
+    //
+    // const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+    //   event.preventDefault();
+    //
+    //   const authenticationDetails = new AuthenticationDetails({
+    //     Username: username,
+    //     Password: password,
+    //   });
+    //
+    //   const cognitoUser = new CognitoUser({
+    //     Username: username,
+    //     Pool: userPool
+    //   });
+    //
+    //   cognitoUser.authenticateUser(authenticationDetails, {
+    //     onSuccess: (result: CognitoUserSession) => {
+    //       const accessToken = result.getAccessToken().getJwtToken();
+    //       setMessage('Login successful!');
+    //       console.log('Access Token:', accessToken);
+    //       // Here you can redirect the user or update app state
+    //     },
+    //     onFailure: (err: any) => {
+    //       setMessage(`Login failed: ${err.message}`);
+    //     },
+    //   });
+    // };
 
-  return (
-    <div>
-      <PrototypeDisclaimer />
+    return (
+        <div>
+            <PrototypeDisclaimer/>
 
-      {/*<form onSubmit={onSubmit}>*/}
-      {/*  <input*/}
-      {/*    value={username}*/}
-      {/*    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUsername(e.target.value)}*/}
-      {/*    placeholder="Username"*/}
-      {/*  />*/}
-      {/*  <input*/}
-      {/*    value={password}*/}
-      {/*    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}*/}
-      {/*    placeholder="Password"*/}
-      {/*    type="password"*/}
-      {/*  />*/}
-      {/*  <button type="submit">Login</button>*/}
-      {/*</form>*/}
-      {/*{message && <p>{message}</p>}*/}
-    </div>
-  );
+            {/*<form onSubmit={onSubmit}>*/}
+            {/*  <input*/}
+            {/*    value={username}*/}
+            {/*    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUsername(e.target.value)}*/}
+            {/*    placeholder="Username"*/}
+            {/*  />*/}
+            {/*  <input*/}
+            {/*    value={password}*/}
+            {/*    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}*/}
+            {/*    placeholder="Password"*/}
+            {/*    type="password"*/}
+            {/*  />*/}
+            {/*  <button type="submit">Login</button>*/}
+            {/*</form>*/}
+            {/*{message && <p>{message}</p>}*/}
+        </div>
+    );
 };
 
 export default LoginPage;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Icons from './Icons';
-import { ReactComponent as LogoIcon } from '@/logo.svg';
-import { Link } from 'react-router-dom';
+import {ReactComponent as LogoIcon} from '@/logo.svg';
+import {Link} from 'react-router-dom';
 import Menu from "@/components/Menu";
 
 interface NavigationProps {
@@ -9,7 +9,7 @@ interface NavigationProps {
     setIsMobileMenuOpen: (isOpen: boolean) => void;
 }
 
-const Header: React.FC<NavigationProps> = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => (
+const Header: React.FC<NavigationProps> = ({isMobileMenuOpen, setIsMobileMenuOpen}) => (
     <>
         <nav className="bg-blue-600 p-4 text-white">
             <div className="container mx-auto flex justify-between items-center">
@@ -20,7 +20,7 @@ const Header: React.FC<NavigationProps> = ({ isMobileMenuOpen, setIsMobileMenuOp
 
                 <div className="hidden md:flex space-x-4">
                     <Menu/>
-                {/*<Icons name="search"/>*/}
+                    {/*<Icons name="search"/>*/}
                     {/*<Icons name="bell"/>*/}
                     {/*<Link to="/login" className="flex items-center">*/}
                     {/*    <Icons name="login"/>*/}
@@ -42,7 +42,7 @@ const Header: React.FC<NavigationProps> = ({ isMobileMenuOpen, setIsMobileMenuOp
         {isMobileMenuOpen && (
             <div className="md:hidden bg-blue-500 p-4">
                 <div className="flex justify-around">
-                        <Menu/>
+                    <Menu/>
                 </div>
             </div>
         )}

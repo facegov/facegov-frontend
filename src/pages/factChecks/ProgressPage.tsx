@@ -59,11 +59,11 @@ const VerdictBadge: React.FC<{ verdict: FactCheck['verdict'] }> = ({verdict}) =>
         'False': 'bg-red-100 text-red-800'
     }[verdict];
 
-  return (
-      <span className={`px-2 py-1 rounded-full text-xs font-semibold ${colorClass}`}>
+    return (
+        <span className={`px-2 py-1 rounded-full text-xs font-semibold ${colorClass}`}>
       {verdict}
     </span>
-  );
+    );
 };
 
 const FactCheckItem: React.FC<{ factCheck: FactCheck }> = ({factCheck}) => (
@@ -89,8 +89,8 @@ const ProgressPage: React.FC = () => {
 
     return (
         <div className="container mx-auto mt-8">
-            <FactChecksMenu/>
             <h1 className="text-4xl font-bold text-blue-600 mb-4">Fact Checks</h1>
+            <FactChecksMenu/>
             <PrototypeDisclaimer/>
             <PoliticalProgressChart/>
             <div className="relative mb-6">

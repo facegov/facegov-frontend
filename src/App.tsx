@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
 import Header from '@/components/Header';
-import Menu from '@/components/Menu';
-import RightSidebar from '@/components/RightSidebar';
 import HomePage from '@/pages/HomePage';
 import FactChecksPage from '@/pages/FactChecksPage';
 import PoliticiansPage from '@/pages/politicians/PoliticiansPage';

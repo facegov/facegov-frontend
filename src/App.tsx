@@ -17,12 +17,13 @@ import ActivistsPage from "@/pages/activists/ActivistsPage";
 import {I18nextProvider} from 'react-i18next';
 import i18n from './i18n';
 import AWS from 'aws-sdk';
+import {config} from "@/config";
 
 // Configure AWS SDK
 AWS.config.update({
-    region: 'YOUR_AWS_REGION',
+    region: config.cloudWatchRegion,
     credentials: new AWS.CognitoIdentityCredentials({
-        IdentityPoolId: 'YOUR_IDENTITY_POOL_ID'
+        IdentityPoolId: config.cloudWatchIdentityPoolId
     })
 });
 

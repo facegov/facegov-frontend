@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
 import Header from '@/components/Header';
 import HomePage from '@/pages/HomePage';
-import FactChecksPage from '@/pages/FactChecksPage';
+import FactChecksPage from '@/pages/factChecks/FactChecksPage';
 import PoliticiansPage from '@/pages/politicians/PoliticiansPage';
 import {Post} from '@/types';
 import Community from "@/pages/Community";
@@ -18,6 +18,8 @@ import AWS from 'aws-sdk';
 import {config} from "@/config";
 import ElectionsPage from "@/pages/politicians/ElectionsPage";
 import ParliamentPage from "@/pages/politicians/ParliamentPage";
+import ProgressPage from "@/pages/factChecks/ProgressPage";
+import MiscommunicationPage from "@/pages/factChecks/MiscommunicationPage";
 
 // Configure AWS SDK
 AWS.config.update({
@@ -106,6 +108,8 @@ const App: React.FC = () => {
                             <Routes>
                                 <Route path="/" element={<HomePage/>}/>
                                 <Route path="/fact-checks" element={<FactChecksPage/>}/>
+                                <Route path="/miscommunication" element={<MiscommunicationPage/>}/>
+                                <Route path="/progress" element={<ProgressPage/>}/>
                                 <Route path="/login" element={<LoginPage/>}/>
                                 <Route path="/politicians" element={<PoliticiansPage/>}/>
                                 <Route path="/elections" element={<ElectionsPage/>}/>

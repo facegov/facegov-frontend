@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Search} from 'lucide-react';
 import PoliticalProgressChart from "@/components/PoliticalProgressChart";
 import PrototypeDisclaimer from "@/components/PrototypeDisclaimer";
+import FactChecksMenu from "@/pages/factChecks/FactChecksMenu";
 
 interface FactCheck {
     id: number;
@@ -76,7 +77,7 @@ const FactCheckItem: React.FC<{ factCheck: FactCheck }> = ({factCheck}) => (
     </div>
 );
 
-const FactChecksPage: React.FC = () => {
+const ProgressPage: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
 
@@ -88,6 +89,7 @@ const FactChecksPage: React.FC = () => {
 
     return (
         <div className="container mx-auto mt-8">
+            <FactChecksMenu/>
             <h1 className="text-4xl font-bold text-blue-600 mb-4">Fact Checks</h1>
             <PrototypeDisclaimer/>
             <PoliticalProgressChart/>
@@ -104,11 +106,8 @@ const FactChecksPage: React.FC = () => {
             {filteredFactChecks.map(factCheck => (
                 <FactCheckItem key={factCheck.id} factCheck={factCheck}/>
             ))}
-
-            <h1 className="text-3xl font-bold mb-6">Top 10 miscommunication</h1>
-            <p>TODO</p>
         </div>
     );
 };
 
-export default FactChecksPage;
+export default ProgressPage;

@@ -5,12 +5,12 @@ import Icons from './Icons';
 const Menu: React.FC = () => (
     <nav className="w-full p-4">
         <ul className="flex justify-around items-center">
-            <li>
-                <Link to="/" className="flex items-center">
-                    <Icons name="home"/>
-                    <span className="hidden md:inline ml-2">Home</span>
-                </Link>
-            </li>
+            {/*<li>*/}
+            {/*    <Link to="/" className="flex items-center">*/}
+            {/*        <Icons name="home"/>*/}
+            {/*        <span className="hidden md:inline ml-2">Home</span>*/}
+            {/*    </Link>*/}
+            {/*</li>*/}
             <li>
                 <Link to="/fact-checks" className="flex items-center">
                     <Icons name="barChart"/>

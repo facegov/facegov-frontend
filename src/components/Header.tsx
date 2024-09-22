@@ -11,7 +11,7 @@ interface NavigationProps {
 
 const Header: React.FC<NavigationProps> = ({isMobileMenuOpen, setIsMobileMenuOpen}) => (
     <>
-        <nav className="bg-blue-600 p-4 text-white">
+        <nav className="bg-blue-600 p-3 text-white">
             <div className="container mx-auto flex justify-between items-center">
                 <Link to="/" className="flex items-center">
                     <LogoIcon className="w-8 h-8"/>
@@ -40,7 +40,7 @@ const Header: React.FC<NavigationProps> = ({isMobileMenuOpen, setIsMobileMenuOpe
         </nav>
 
         {isMobileMenuOpen && (
-            <div className="md:hidden bg-blue-500 p-4">
+            <div className="md:hidden bg-blue-500 p-0">
                 <div className="flex justify-around">
                     <Menu/>
                 </div>

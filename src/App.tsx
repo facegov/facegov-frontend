@@ -4,11 +4,10 @@ import Header from '@/components/Header';
 import HomePage from '@/pages/HomePage';
 import FactChecksPage from '@/pages/factChecks/FactChecksPage';
 import PoliticiansPage from '@/pages/politicians/PoliticiansPage';
-import {Post} from '@/types';
 import CommunityPage from "@/pages/community/CommunityPage";
 import GetInvolvedPage from "@/pages/getInvolved/GetInvolvedPage";
 import AboutPage from "@/pages/AboutPage";
-import Feed from "@/components/Feed";
+import Feed from "@/pages/community/Feed";
 import LoginPage from "@/pages/LoginPage";
 import TerritorialGroupPage from "@/pages/activists/TerritorialGroupPage";
 import ActivistsPage from "@/pages/activists/ActivistsPage";
@@ -80,24 +79,6 @@ const App: React.FC = () => {
 
     log('Button clicked', 'MyReactAppLogs', 'UserInteractionLogs');
 
-
-    const [posts] = useState<Post[]>([
-        {
-            id: 1,
-            author: 'Jane Doe',
-            content: 'Just fact-checked the latest statement from Senator Smith. Here\'s what I found...',
-            likes: 245,
-            comments: 89
-        },
-        {
-            id: 2,
-            author: 'John Public',
-            content: 'Comparing campaign promises to actual policy implementations. The results are surprising!',
-            likes: 189,
-            comments: 56
-        },
-    ]);
-
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
     return (
@@ -125,7 +106,7 @@ const App: React.FC = () => {
                                 <Route path="/activists" element={<ActivistsPage/>}/>
                                 <Route path="/open-source" element={<GetInvolvedPage/>}/>
                                 <Route path="/about" element={<AboutPage/>}/>
-                                <Route path="/newThead" element={<Feed posts={posts}/>}/>
+                                <Route path="/newThead" element={<Feed />}/>
                                 <Route path="/groups" element={<TerritorialGroupPage/>}/>
                                 <Route path="/proposals" element={<ProposalsPage/>}/>
                                 <Route path="*" element={<Navigate to="/" replace/>}/>

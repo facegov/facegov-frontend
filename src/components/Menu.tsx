@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import Icons from './Icons';
 
 const Menu: React.FC = () => (
-    <nav className="w-full pr-4 pl-4 pt-1 pb-1 mt-0 text-white">
+    <nav>
         <ul className="flex justify-around items-center">
             {/*<li>*/}
             {/*    <Link to="/" className="flex items-center">*/}

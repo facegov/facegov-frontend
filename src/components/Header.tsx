@@ -96,8 +96,8 @@ const Header: React.FC<NavigationProps> = () => {
                     </div>
                 </nav>
             </div>
-            <div className=" bg-blue-500 pt-1 text-white">
-                <div className="container mx-auto px-4">
+            <div className="bg-blue-500 text-white">
+                <div className="container mx-auto">
                     <Menu/>
                 </div>
             </div>

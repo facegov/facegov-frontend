@@ -21,7 +21,7 @@ const CommunityMenu: React.FC = () => (
                         </Link>
                     </li>
                     <li>
-                        <Link to="/trending-topics" className="flex flex-col items-center text-center">
+                        <Link to="/todo" className="flex flex-col items-center text-center">
                             <Icons name="parliament"/>
                             <span className="mt-1">Trending Topics</span>
                         </Link>

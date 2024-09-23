@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { User, Send } from 'lucide-react';
+import CommunityMenu from "@/pages/community/CommunityMenu";
 
 interface Message {
   id: number;
@@ -75,7 +76,7 @@ const Chat: React.FC = () => {
   return (
       <div>
         <h1 className="text-4xl font-bold text-blue-600 mb-4">Chat</h1>
-
+        <CommunityMenu/>
         <div className=" bg-white border-r">
           <div className="p-4 border-b">
             <h2 className="text-xl font-semibold">Friends</h2>

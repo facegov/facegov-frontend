@@ -20,6 +20,12 @@ const ActivistsMenu: React.FC = () => (
                             <span className="mt-1">Territorial Groups</span>
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/todo" className="flex flex-col items-center text-center">
+                            <Icons name="elections"/>
+                            <span className=" mt-1">Online Voting</span>
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </Card>

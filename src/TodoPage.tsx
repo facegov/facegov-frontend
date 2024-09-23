@@ -2,12 +2,11 @@ import React from 'react';
 import PrototypeDisclaimer from "@/components/PrototypeDisclaimer";
 import CommunityMenu from "@/pages/community/CommunityMenu";
 
-const TrendingTopics: React.FC = () => {
+const TodoPage: React.FC = () => {
 
     return (
         <div>
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Trending Topics</h1>
-            <CommunityMenu/>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">TODO Page</h1>
             <PrototypeDisclaimer/>
 
             <p>TODO .... </p>
@@ -16,4 +15,4 @@ const TrendingTopics: React.FC = () => {
     );
 };
 
-export default TrendingTopics;
+export default TodoPage;

@@ -20,7 +20,7 @@ import ParliamentPage from "@/pages/politicians/ParliamentPage";
 import ProgressPage from "@/pages/factCheck/ProgressPage";
 import ClaimVerifierPage from "@/pages/factCheck/ClaimVerifierPage";
 import ProposalsPage from "@/pages/activists/ProposalsPage";
-import TrendingTopicsPage from "@/pages/community/TrendingTopicsPage";
+import TodoPage from "@/TodoPage";
 import Chat from "@/pages/community/Chat";
 import ForumPage from "@/pages/community/ForumPage";
 import Resources from "@/Resources";
@@ -104,7 +104,7 @@ const App: React.FC = () => {
                                 <Route path="/parliament" element={<ParliamentPage/>}/>
                                 <Route path="/community" element={<CommunityPage/>}/>
                                 <Route path="/faatured-discussions" element={<ForumPage/>}/>
-                                <Route path="/trending-topics" element={<TrendingTopicsPage/>}/>
+                                <Route path="/todo" element={<TodoPage/>}/>
                                 <Route path="/activists" element={<ActivistsPage/>}/>
                                 <Route path="/open-source" element={<GetInvolvedPage/>}/>
                                 <Route path="/about" element={<AboutPage/>}/>

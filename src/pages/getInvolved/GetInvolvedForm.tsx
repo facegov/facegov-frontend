@@ -86,7 +86,7 @@ const GetInvolvedForm: React.FC = () => {
                     isLoading={isLoading}
                     loadingText="Registering..."
                 >
-                    Join FaceGov Now
+                    Join The Open Source Project Now
                 </LoadingButton>
             </form>
             <p className="mt-4 text-lg">

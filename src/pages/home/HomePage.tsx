@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import GetInvolvedPage from "@/pages/getInvolved/GetInvolvedPage";
 import { CloudWatchLogger } from '@/utils/CloudwatchLoggerUtil';
 import { config } from "@/config";
-import CountrySelector from './CountrySelector';  // Assume we've moved the CountrySelector to its own file
+import CountrySelector from './CountrySelector';
+import { Country, countries } from '@/lib/countries';
 
 const log = new CloudWatchLogger(
     config.cloudWatchRegion,
@@ -13,28 +14,35 @@ const log = new CloudWatchLogger(
 
 const HomePage: React.FC = () => {
     const [showCountrySelector, setShowCountrySelector] = useState<boolean>(true);
-    const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
+    const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
 
     useEffect(() => {
-        const country = localStorage.getItem('selectedCountry');
-        if (country) {
-            setSelectedCountry(country);
-            setShowCountrySelector(false);
+        const countryCode = localStorage.getItem('selectedCountry');
+        if (countryCode) {
+            const country = countries.find(c => c.code === countryCode);
+            if (country) {
+                setSelectedCountry(country);
+                setShowCountrySelector(false);
+            }
         }
         log.info("Home Page Loaded");
     }, []);
 
     const handleCountrySelect = (countryCode: string) => {
-        localStorage.setItem('selectedCountry', countryCode);
-        setSelectedCountry(countryCode);
-        setShowCountrySelector(false);
-        log.info(`Country selected: ${countryCode}`);
+        const country = countries.find(c => c.code === countryCode);
+        if (country) {
+            localStorage.setItem('selectedCountry', countryCode);
+            setSelectedCountry(country);
+            setShowCountrySelector(false);
+            log.info(`Country selected: ${country.name}`);
+        }
     };
 
     if (showCountrySelector) {
         return (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                 <div className="bg-white p-8 rounded-lg shadow-lg">
+                    <h2 className="text-2xl font-bold mb-4">Welcome! Please select your country:</h2>
                     <CountrySelector onSelect={handleCountrySelect} />
                 </div>
             </div>
@@ -43,6 +51,13 @@ const HomePage: React.FC = () => {
 
     return (
         <>
+            {selectedCountry && (
+                <div className="bg-blue-100 p-4 mb-4">
+                    <p className="text-lg">
+                        Selected Country: <strong>{selectedCountry.name}</strong> ({selectedCountry.continent})
+                    </p>
+                </div>
+            )}
             <GetInvolvedPage />
         </>
     );

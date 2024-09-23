@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
 import Header from '@/components/Header';
 import HomePage from '@/pages/home/HomePage';
@@ -80,14 +80,13 @@ const App: React.FC = () => {
 
     log('Button clicked', 'MyReactAppLogs', 'UserInteractionLogs');
 
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
     return (
         <I18nextProvider i18n={i18n}>
 
             <Router>
                 <div className="min-h-screen bg-gray-100">
-                    <Header isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen}/>
+                    <Header/>
 
                     <div className="container mx-auto mt-6 px-4 md:px-0">
 

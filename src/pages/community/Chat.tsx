@@ -21,7 +21,7 @@ interface Friend {
 //   color?: string;
 // }
 
-const ChatComponent: React.FC = () => {
+const Chat: React.FC = () => {
   const [friends, setFriends] = useState<Friend[]>([]);
   const [activeChats, setActiveChats] = useState<number[]>([]);
   const [messages, setMessages] = useState<{ [key: number]: Message[] }>({});
@@ -137,4 +137,4 @@ const ChatComponent: React.FC = () => {
   );
 };
 
-export default ChatComponent;
+export default Chat;

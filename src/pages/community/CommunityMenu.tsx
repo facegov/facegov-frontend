@@ -11,13 +11,13 @@ const CommunityMenu: React.FC = () => (
                     <li>
                         <Link to="/chat" className="flex flex-col items-center text-center">
                             <Icons name="messageCircle"/>
-                            <span className=" mt-1">Chat</span>
+                            <span className=" mt-1">Private Chats</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/faatured-discussions" className="flex flex-col items-center text-center">
                             <Icons name="elections"/>
-                            <span className=" mt-1">Featured Discussions</span>
+                            <span className=" mt-1">Public Forum</span>
                         </Link>
                     </li>
                     <li>

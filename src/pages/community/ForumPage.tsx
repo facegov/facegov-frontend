@@ -11,10 +11,9 @@ const FeaturedDiscussionPage: React.FC = () => {
     ]);
     return (
         <div className="container mx-auto mt-8">
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Featured Discussions</h1>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Forum</h1>
             <CommunityMenu/>
             <PrototypeDisclaimer/>
-            <h1 className="text-3xl font-bold mb-4">Discussion Forum</h1>
             <div className="container mx-auto mt-8">
                 <p className="mb-4">Join the conversation and shape the future of politics.</p>
             </div>

@@ -20,9 +20,9 @@ import ParliamentPage from "@/pages/politicians/ParliamentPage";
 import ProgressPage from "@/pages/factCheck/ProgressPage";
 import MiscommunicationPage from "@/pages/factCheck/MiscommunicationPage";
 import ProposalsPage from "@/pages/activists/ProposalsPage";
-import FeaturedDiscussionPage from "@/pages/community/FeaturedDiscussionsPage";
 import TrendingTopicsPage from "@/pages/community/TrendingTopicsPage";
-import ChatComponent from "@/components/ChatComponent";
+import Chat from "@/pages/community/Chat";
+import ForumPage from "@/pages/community/ForumPage";
 
 // Configure AWS SDK
 AWS.config.update({
@@ -94,7 +94,7 @@ const App: React.FC = () => {
                         <main className="w-full">
                             <Routes>
                                 <Route path="/" element={<HomePage/>}/>
-                                <Route path="/chat" element={<ChatComponent/>}/>
+                                <Route path="/chat" element={<Chat/>}/>
                                 <Route path="/fact-checks" element={<FactChecksPage/>}/>
                                 <Route path="/miscommunication" element={<MiscommunicationPage/>}/>
                                 <Route path="/progress" element={<ProgressPage/>}/>
@@ -103,7 +103,7 @@ const App: React.FC = () => {
                                 <Route path="/elections" element={<ElectionsPage/>}/>
                                 <Route path="/parliament" element={<ParliamentPage/>}/>
                                 <Route path="/community" element={<CommunityPage/>}/>
-                                <Route path="/faatured-discussions" element={<FeaturedDiscussionPage/>}/>
+                                <Route path="/faatured-discussions" element={<ForumPage/>}/>
                                 <Route path="/trending-topics" element={<TrendingTopicsPage/>}/>
                                 <Route path="/activists" element={<ActivistsPage/>}/>
                                 <Route path="/open-source" element={<GetInvolvedPage/>}/>

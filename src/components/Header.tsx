@@ -8,7 +8,7 @@ import Menu from "@/components/Menu";
 const Header: React.FC = () => {
     return (
         <>
-            <div className="bg-blue-600 p-1 text-white">
+            <div className="bg-blue-600 p-2 text-white">
                 <nav className="container mx-auto px-4">
                     <div className="flex items-center">
                         <div className="w-1/3 flex justify-start">

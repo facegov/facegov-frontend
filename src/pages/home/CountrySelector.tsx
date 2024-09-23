@@ -3,9 +3,11 @@ import { Country, countries } from '@/lib/countries';
 
 interface CountrySelectorProps {
   onSelect: (countryCode: string) => void;
+  currentCountry?: string;
 }
-const CountrySelector: React.FC<CountrySelectorProps> = ({ onSelect }) => {
-  const [selectedCountry, setSelectedCountry] = useState<string>('');
+
+const CountrySelector: React.FC<CountrySelectorProps> = ({ onSelect, currentCountry }) => {
+  const [selectedCountry, setSelectedCountry] = useState<string>(currentCountry || '');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   const groupedCountries = useMemo(() => {
@@ -45,7 +47,6 @@ const CountrySelector: React.FC<CountrySelectorProps> = ({ onSelect }) => {
 
   return (
       <div className="flex flex-col items-center p-4">
-        <h2 className="text-2xl font-bold mb-4">Welcome to FaceGov!</h2>
         <h1 className="text-1xl font-bold mb-4">Please, Select Your Country:</h1>
         <div className="w-64 mb-4">
           <input

@@ -25,8 +25,10 @@ const Header: React.FC<NavigationProps> = ({isMobileMenuOpen, setIsMobileMenuOpe
                     </div>
 
                     <div className="w-1/3 flex justify-end">
+                        <button>
+                            <Icons name="menu"/>
+                        </button>
                         <div className="hidden md:flex space-x-4">
-                            <Menu/>
                             {/*<Icons name="search"/>*/}
                             {/*<Icons name="bell"/>*/}
                             {/*<Link to="/login" className="flex items-center">*/}
@@ -37,24 +39,17 @@ const Header: React.FC<NavigationProps> = ({isMobileMenuOpen, setIsMobileMenuOpe
                             {/*</Link>*/}
                             {/*<LanguageSwitcher/>*/}
                         </div>
-                        <button
-                            className="md:hidden"
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        >
-                            <Icons name="menu"/>
-                        </button>
                     </div>
                 </div>
             </div>
         </nav>
 
-        {isMobileMenuOpen && (
-            <div className="md:hidden bg-blue-500 p-0">
-                <div className="flex justify-around">
-                    <Menu/>
-                </div>
+        <div className=" bg-blue-500 p-0">
+            <div className="flex justify-around">
+                <Menu/>
             </div>
-        )}
+        </div>
+
     </>
 );
 

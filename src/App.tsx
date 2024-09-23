@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
 import Header from '@/components/Header';
 import HomePage from '@/pages/home/HomePage';
-import FactChecksPage from '@/pages/factCheck/FactChecksPage';
+import FactCheckPage from '@/pages/factCheck/FactCheckPage';
 import PoliticiansPage from '@/pages/politicians/PoliticiansPage';
 import CommunityPage from "@/pages/community/CommunityPage";
 import GetInvolvedPage from "@/pages/getInvolved/GetInvolvedPage";
@@ -18,7 +18,7 @@ import {config} from "@/config";
 import ElectionsPage from "@/pages/politicians/ElectionsPage";
 import ParliamentPage from "@/pages/politicians/ParliamentPage";
 import ProgressPage from "@/pages/factCheck/ProgressPage";
-import MiscommunicationPage from "@/pages/factCheck/MiscommunicationPage";
+import ClaimVerifierPage from "@/pages/factCheck/ClaimVerifierPage";
 import ProposalsPage from "@/pages/activists/ProposalsPage";
 import TrendingTopicsPage from "@/pages/community/TrendingTopicsPage";
 import Chat from "@/pages/community/Chat";
@@ -95,8 +95,8 @@ const App: React.FC = () => {
                             <Routes>
                                 <Route path="/" element={<HomePage/>}/>
                                 <Route path="/chat" element={<Chat/>}/>
-                                <Route path="/fact-checks" element={<FactChecksPage/>}/>
-                                <Route path="/miscommunication" element={<MiscommunicationPage/>}/>
+                                <Route path="/fact-checks" element={<FactCheckPage/>}/>
+                                <Route path="/claims" element={<ClaimVerifierPage/>}/>
                                 <Route path="/progress" element={<ProgressPage/>}/>
                                 <Route path="/login" element={<LoginPage/>}/>
                                 <Route path="/politicians" element={<PoliticiansPage/>}/>

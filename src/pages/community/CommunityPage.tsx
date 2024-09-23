@@ -9,8 +9,6 @@ const CommunityPage: React.FC = () => {
         <div className="container mx-auto mt-8">
             <h1 className="text-4xl font-bold text-blue-600 mb-4">Community</h1>
             <CommunityMenu/>
-            <PrototypeDisclaimer/>
-
             <p className="text-xl text-gray-700">Initiate and engage in meaningful political discussions.
                 Whether you&apos;re passionate about local issues or global policies, this is your platform to share
                 ideas,

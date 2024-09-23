@@ -9,6 +9,12 @@ const CommunityMenu: React.FC = () => (
             <div className="p-4 w-full">
                 <ul className="flex flex-row justify-around items-center w-full">
                     <li>
+                        <Link to="/chat" className="flex flex-col items-center text-center">
+                            <Icons name="messageCircle"/>
+                            <span className=" mt-1">Chat</span>
+                        </Link>
+                    </li>
+                    <li>
                         <Link to="/faatured-discussions" className="flex flex-col items-center text-center">
                             <Icons name="elections"/>
                             <span className=" mt-1">Featured Discussions</span>

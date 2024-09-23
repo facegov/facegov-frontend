@@ -22,6 +22,7 @@ import MiscommunicationPage from "@/pages/factChecks/MiscommunicationPage";
 import ProposalsPage from "@/pages/activists/ProposalsPage";
 import FeaturedDiscussionPage from "@/pages/community/FeaturedDiscussionsPage";
 import TrendingTopicsPage from "@/pages/community/TrendingTopicsPage";
+import ChatComponent from "@/components/ChatComponent";
 
 // Configure AWS SDK
 AWS.config.update({
@@ -93,6 +94,7 @@ const App: React.FC = () => {
                         <main className="w-full">
                             <Routes>
                                 <Route path="/" element={<HomePage/>}/>
+                                <Route path="/chat" element={<ChatComponent/>}/>
                                 <Route path="/fact-checks" element={<FactChecksPage/>}/>
                                 <Route path="/miscommunication" element={<MiscommunicationPage/>}/>
                                 <Route path="/progress" element={<ProgressPage/>}/>

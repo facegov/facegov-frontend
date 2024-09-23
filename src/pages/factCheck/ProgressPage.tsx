@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Search} from 'lucide-react';
 import PoliticalProgressChart from "@/components/PoliticalProgressChart";
 import PrototypeDisclaimer from "@/components/PrototypeDisclaimer";
-import FactChecksMenu from "@/pages/factChecks/FactChecksMenu";
+import FactChecksMenu from "@/pages/factCheck/FactChecksMenu";
 
 interface FactCheck {
     id: number;

@@ -1,5 +1,5 @@
 import React from 'react';
-import FactChecksMenu from "@/pages/factChecks/FactChecksMenu";
+import FactChecksMenu from "@/pages/factCheck/FactChecksMenu";
 
 
 const MiscommunicationPage: React.FC = () => {

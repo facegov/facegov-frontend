@@ -51,7 +51,16 @@ const Menu: React.FC = () => {
                                 Join Open Source
                             </div>
                         </Link>
-
+                        <Link
+                            to="/documentation"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            onClick={closeMenu}
+                        >
+                            <div className="flex items-center">
+                                <Icons name="document" />
+                                Documentation
+                            </div>
+                        </Link>
                         <Link
                             to="/about"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -62,7 +71,6 @@ const Menu: React.FC = () => {
                                 Mission Statement
                             </div>
                         </Link>
-
                         <a
                             href="mailto:puglieseweb@gmail.com"
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"

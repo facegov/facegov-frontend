@@ -23,6 +23,7 @@ import ProposalsPage from "@/pages/activists/ProposalsPage";
 import TrendingTopicsPage from "@/pages/community/TrendingTopicsPage";
 import Chat from "@/pages/community/Chat";
 import ForumPage from "@/pages/community/ForumPage";
+import Resources from "@/Resources";
 
 // Configure AWS SDK
 AWS.config.update({
@@ -107,6 +108,7 @@ const App: React.FC = () => {
                                 <Route path="/activists" element={<ActivistsPage/>}/>
                                 <Route path="/open-source" element={<GetInvolvedPage/>}/>
                                 <Route path="/about" element={<AboutPage/>}/>
+                                <Route path="/documentation" element={<Resources/>}/>
                                 <Route path="/newThead" element={<Feed />}/>
                                 <Route path="/groups" element={<TerritorialsGroupPage/>}/>
                                 <Route path="/proposals" element={<ProposalsPage/>}/>

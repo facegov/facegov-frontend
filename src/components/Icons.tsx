@@ -2,6 +2,7 @@ import React from 'react';
 
 export type IconName =
     'bell'
+    | 'mail'
     | 'messageCircle'
     | 'search'
     | 'home'
@@ -216,6 +217,24 @@ const Icons: React.FC<IconProps> = ({name}) => {
 		c-13.565,0-27.09,2.369-41.346,7.155c-0.041,1.577-0.095,3.154-0.095,4.738c0,56.435,45.922,102.358,102.406,102.358
 		c26.576,0,51.758-10.154,70.955-28.614c16.788-16.152,27.47-37.299,30.516-60.07c0.163-1.266,0.312-2.471,0.42-3.737
 		c-2.789,1.104-5.632,2.051-8.421,2.843C309.829,383.229,300.163,384.657,290.374,384.657z"/>
+            </g>
+        </svg>,
+
+        mail: <svg fill="#000000" width="24" height="24" version="1.1" id="XMLID_276_" xmlns="http://www.w3.org/2000/svg"
+                   viewBox="0 0 24 24">
+            <g id="contact-us">
+                <g>
+                    <path d="M4,24v-5H0V0h23v19h-9.3L4,24z M2,17h4v3.7l7.3-3.7H21V2H2V17z"/>
+                </g>
+                <g>
+                    <rect x="5" y="8" width="3" height="3"/>
+                </g>
+                <g>
+                    <rect x="10" y="8" width="3" height="3"/>
+                </g>
+                <g>
+                    <rect x="15" y="8" width="3" height="3"/>
+                </g>
             </g>
         </svg>,
         elections: <svg fill="#000000" height="24" width="24" xmlns="http://www.w3.org/2000/svg"

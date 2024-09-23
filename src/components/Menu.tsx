@@ -62,6 +62,17 @@ const Menu: React.FC = () => {
                                 Mission Statement
                             </div>
                         </Link>
+
+                        <a
+                            href="mailto:puglieseweb@gmail.com"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            onClick={closeMenu}
+                        >
+                            <div className="flex items-center">
+                                <Icons name="mail" />
+                                Contact Us
+                            </div>
+                        </a>
                     </div>
                 </div>
             )}

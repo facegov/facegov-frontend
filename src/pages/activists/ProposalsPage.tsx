@@ -86,7 +86,7 @@ const LegislativeProposalsApp: React.FC = () => {
     return (
         <div className="max-w-4xl mx-auto p-4">
 
-            <h1 className="text-3xl font-bold mb-6">Legislative Proposals</h1>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Legislative Proposals</h1>
             <ActivistsMenu/>
             <PrototypeDisclaimer/>
             <form onSubmit={handleSubmit} className="mb-8 space-y-4">

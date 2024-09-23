@@ -9,7 +9,7 @@ import GetInvolvedPage from "@/pages/getInvolved/GetInvolvedPage";
 import AboutPage from "@/pages/AboutPage";
 import Feed from "@/pages/community/Feed";
 import LoginPage from "@/pages/LoginPage";
-import TerritorialGroupPage from "@/pages/activists/TerritorialGroupPage";
+import TerritorialsGroupPage from "@/pages/activists/TerritorialsGroupPage";
 import ActivistsPage from "@/pages/activists/ActivistsPage";
 import {I18nextProvider} from 'react-i18next';
 import i18n from './i18n';
@@ -109,7 +109,7 @@ const App: React.FC = () => {
                                 <Route path="/open-source" element={<GetInvolvedPage/>}/>
                                 <Route path="/about" element={<AboutPage/>}/>
                                 <Route path="/newThead" element={<Feed />}/>
-                                <Route path="/groups" element={<TerritorialGroupPage/>}/>
+                                <Route path="/groups" element={<TerritorialsGroupPage/>}/>
                                 <Route path="/proposals" element={<ProposalsPage/>}/>
                                 <Route path="*" element={<Navigate to="/" replace/>}/>
                             </Routes>

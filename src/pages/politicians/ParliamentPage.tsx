@@ -64,7 +64,7 @@ const ParliamentPage: React.FC = () => {
 
     return (
         <div className="container mx-auto mt-8">
-            <h1 className="text-3xl font-bold text-center mb-8">Members of Parliament</h1>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Members of Parliament</h1>
             <PoliticiansMenu/>
             <PrototypeDisclaimer/>
             <p className="text-xl text-gray-700">Get to know your MPs....</p>

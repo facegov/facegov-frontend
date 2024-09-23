@@ -88,7 +88,7 @@ const ClaimVerifierPage: React.FC = () => {
     );
     return (
         <div className="container mx-auto mt-8">
-            <h1 className="text-3xl font-bold mb-6">Miscommunication</h1>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Claim Verifier</h1>
             <FactCheckMenu/>
             <PrototypeDisclaimer/>
             <p className="mt-2">Use the search bar below to find specific claims or browse our

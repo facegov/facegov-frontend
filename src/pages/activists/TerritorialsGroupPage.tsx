@@ -5,7 +5,7 @@ import {Calendar, MessageSquare, Users, Vote} from 'lucide-react';
 import ActivistsMenu from "@/pages/activists/ActivistsMenu";
 import PrototypeDisclaimer from "@/components/PrototypeDisclaimer";
 
-const TerritorialGroupPage = () => {
+const TerritorialsGroupPage = () => {
     const [email, setEmail] = useState('');
 
     const handleSubmit = () => {
@@ -16,7 +16,7 @@ const TerritorialGroupPage = () => {
 
     return (
         <div className="max-w-4xl mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-6 text-center">Territorial Group - Rome</h1>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Territorial Groups</h1>
             <ActivistsMenu/>
             <PrototypeDisclaimer/>
 
@@ -102,4 +102,4 @@ const TerritorialGroupPage = () => {
     );
 };
 
-export default TerritorialGroupPage;
+export default TerritorialsGroupPage;

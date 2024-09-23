@@ -73,63 +73,67 @@ const ChatComponent: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100">
-      <div className="w-1/4 bg-white border-r">
-        <div className="p-4 border-b">
-          <h2 className="text-xl font-semibold">Friends</h2>
-        </div>
-        <ul>
-          {friends.map(friend => (
-            <li
-              key={friend.guid}
-              className="flex items-center p-3 hover:bg-gray-100 cursor-pointer"
-              onClick={() => openChat(friend.guid)}
-            >
-              <User className="mr-2" />
-              <span>{friend.name}</span>
-              <span className={`ml-auto w-3 h-3 rounded-full ${friend.status === 'online' ? 'bg-green-500' : 'bg-gray-400'}`}></span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="flex-1 flex flex-col-reverse p-4 space-y-4 space-y-reverse">
-        {activeChats.map(friendId => (
-          <div key={friendId} className="bg-white rounded-lg shadow-md w-80">
-            <div className="flex items-center justify-between p-3 bg-blue-600 text-white rounded-t-lg">
-              <h3 className="font-semibold">{friends.find(f => f.guid === friendId)?.name}</h3>
-              <button onClick={() => closeChat(friendId)} className="text-white hover:text-gray-200">
-                &times;
-              </button>
-            </div>
-            <div className="h-64 overflow-y-auto p-3">
-              {messages[friendId]?.map(msg => (
-                <div key={msg.id} className={`mb-2 ${msg.from === currentUser ? 'text-right' : 'text-left'}`}>
-                  <div className={`inline-block p-2 rounded-lg ${msg.from === currentUser ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}>
-                    {msg.message}
-                  </div>
-                  <div className="text-xs text-gray-500 mt-1">{msg.time}</div>
-                </div>
-              ))}
-            </div>
-            <div className="p-3 border-t flex">
-              <input
-                type="text"
-                value={newMessage}
-                onChange={(e) => setNewMessage(e.target.value)}
-                className="flex-1 border rounded-l-lg p-2"
-                placeholder="Type a message..."
-              />
-              <button
-                onClick={() => sendMessage(friendId)}
-                className="bg-blue-500 text-white p-2 rounded-r-lg hover:bg-blue-600"
-              >
-                <Send size={20} />
-              </button>
-            </div>
+      <div className="container mx-auto mt-8">
+        <h1 className="text-4xl font-bold text-blue-600 mb-4">Chat</h1>
+
+        <div className=" bg-white border-r">
+          <div className="p-4 border-b">
+            <h2 className="text-xl font-semibold">Friends</h2>
           </div>
-        ))}
+          <ul>
+            {friends.map(friend => (
+                <li
+                    key={friend.guid}
+                    className="flex items-center p-3 hover:bg-gray-100 cursor-pointer"
+                    onClick={() => openChat(friend.guid)}
+                >
+                  <User className="mr-2"/>
+                  <span>{friend.name}</span>
+                  <span
+                      className={`ml-auto w-3 h-3 rounded-full ${friend.status === 'online' ? 'bg-green-500' : 'bg-gray-400'}`}></span>
+                </li>
+            ))}
+          </ul>
+        </div>
+        <div className="flex-1 flex flex-col-reverse p-4 space-y-4 space-y-reverse">
+          {activeChats.map(friendId => (
+              <div key={friendId} className="bg-white rounded-lg shadow-md w-80">
+                <div className="flex items-center justify-between p-3 bg-blue-600 text-white rounded-t-lg">
+                  <h3 className="font-semibold">{friends.find(f => f.guid === friendId)?.name}</h3>
+                  <button onClick={() => closeChat(friendId)} className="text-white hover:text-gray-200">
+                    &times;
+                  </button>
+                </div>
+                <div className="h-64 overflow-y-auto p-3">
+                  {messages[friendId]?.map(msg => (
+                      <div key={msg.id} className={`mb-2 ${msg.from === currentUser ? 'text-right' : 'text-left'}`}>
+                        <div
+                            className={`inline-block p-2 rounded-lg ${msg.from === currentUser ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}>
+                          {msg.message}
+                        </div>
+                        <div className="text-xs text-gray-500 mt-1">{msg.time}</div>
+                      </div>
+                  ))}
+                </div>
+                <div className="p-3 border-t flex">
+                  <input
+                      type="text"
+                      value={newMessage}
+                      onChange={(e) => setNewMessage(e.target.value)}
+                      className="flex-1 border rounded-l-lg p-2"
+                      placeholder="Type a message..."
+                  />
+                  <button
+                      onClick={() => sendMessage(friendId)}
+                      className="bg-blue-500 text-white p-2 rounded-r-lg hover:bg-blue-600"
+                  >
+                    <Send size={20}/>
+                  </button>
+                </div>
+              </div>
+          ))}
+        </div>
       </div>
-    </div>
   );
 };
 

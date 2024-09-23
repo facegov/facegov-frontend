@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
 import Header from '@/components/Header';
-import HomePage from '@/pages/HomePage';
+import HomePage from '@/pages/home/HomePage';
 import FactChecksPage from '@/pages/factCheck/FactChecksPage';
 import PoliticiansPage from '@/pages/politicians/PoliticiansPage';
 import CommunityPage from "@/pages/community/CommunityPage";

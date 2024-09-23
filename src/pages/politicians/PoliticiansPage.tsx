@@ -4,7 +4,7 @@ import PoliticiansMenu from "@/pages/politicians/PoliticiansMenu";
 
 const PoliticiansPage: React.FC = () => {
     return (
-        <div className="container mx-auto mt-8">
+       <div>
             <h1 className="text-4xl font-bold text-blue-600 mb-4">Politicians</h1>
             <PoliticiansMenu/>
             <div className="mb-8 text-center text-gray-700">

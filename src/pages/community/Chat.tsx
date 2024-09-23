@@ -73,7 +73,7 @@ const Chat: React.FC = () => {
   };
 
   return (
-      <div className="container mx-auto mt-8">
+      <div>
         <h1 className="text-4xl font-bold text-blue-600 mb-4">Chat</h1>
 
         <div className=" bg-white border-r">

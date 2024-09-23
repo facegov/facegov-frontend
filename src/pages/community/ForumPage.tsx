@@ -10,11 +10,11 @@ const FeaturedDiscussionPage: React.FC = () => {
         {id: 3, title: 'Healthcare Accessibility', author: 'DocPolicy', replies: 37},
     ]);
     return (
-        <div className="container mx-auto mt-8">
+        <div>
             <h1 className="text-4xl font-bold text-blue-600 mb-4">Forum</h1>
             <CommunityMenu/>
             <PrototypeDisclaimer/>
-            <div className="container mx-auto mt-8">
+            <div>
                 <p className="mb-4">Join the conversation and shape the future of politics.</p>
             </div>
             <div className="mb-4">

@@ -8,7 +8,7 @@ const ProgressPage: React.FC = () => {
 
 
     return (
-        <div className="container mx-auto mt-8">
+        <div>
             <h1 className="text-4xl font-bold text-blue-600 mb-4">Policy Implementation Progress</h1>
             <FactCheckMenu/>
             <PrototypeDisclaimer/>

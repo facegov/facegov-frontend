@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutPage: React.FC = () => {
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div>
             <header>
                 <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 text-blue-600 tracking-tight">FaceGov
                     Mission Statement</h1>

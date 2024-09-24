@@ -21,7 +21,7 @@ const ActivistsMenu: React.FC = () => (
                         </Link>
                     </li>
                     <li>
-                        <Link to="/todo" className="flex flex-col items-center text-center">
+                        <Link to="/voting" className="flex flex-col items-center text-center">
                             <Icons name="elections"/>
                             <span className=" mt-1">Online Voting</span>
                         </Link>

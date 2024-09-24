@@ -25,6 +25,8 @@ import ChatPage from "@/pages/community/ChatPage";
 import ForumPage from "@/pages/community/ForumPage";
 import Resources from "@/Resources";
 import ProfilePage from "@/pages/profile/ProfilePage";
+import TrendingPage from "@/pages/community/TrendingPage";
+import VotingPage from "@/pages/activists/VotingPage";
 
 // Configure AWS SDK
 AWS.config.update({
@@ -105,6 +107,8 @@ const App: React.FC = () => {
                                 <Route path="/elections" element={<ElectionsPage/>}/>
                                 <Route path="/parliament" element={<ParliamentPage/>}/>
                                 <Route path="/community" element={<CommunityPage/>}/>
+                                <Route path="/voting" element={<VotingPage/>}/>
+                                <Route path="/trending" element={<TrendingPage/>}/>
                                 <Route path="/faatured-discussions" element={<ForumPage/>}/>
                                 <Route path="/todo" element={<TodoPage/>}/>
                                 <Route path="/activists" element={<ActivistsPage/>}/>

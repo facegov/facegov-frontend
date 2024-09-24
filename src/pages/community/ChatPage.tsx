@@ -22,7 +22,7 @@ interface Friend {
 //   color?: string;
 // }
 
-const Chat: React.FC = () => {
+const ChatPage: React.FC = () => {
   const [friends, setFriends] = useState<Friend[]>([]);
   const [activeChats, setActiveChats] = useState<number[]>([]);
   const [messages, setMessages] = useState<{ [key: number]: Message[] }>({});
@@ -75,8 +75,8 @@ const Chat: React.FC = () => {
 
   return (
       <div>
-        <h1 className="text-4xl font-bold text-blue-600 mb-4">Chat</h1>
         <CommunityMenu/>
+        <h1 className="text-4xl font-bold text-blue-600 mb-4">Chat</h1>
         <div className=" bg-white border-r">
           <div className="p-4 border-b">
             <h2 className="text-xl font-semibold">Friends</h2>
@@ -138,4 +138,4 @@ const Chat: React.FC = () => {
   );
 };
 
-export default Chat;
+export default ChatPage;

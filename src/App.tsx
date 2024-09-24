@@ -21,7 +21,7 @@ import ProgressPage from "@/pages/factCheck/ProgressPage";
 import ClaimVerifierPage from "@/pages/factCheck/ClaimVerifierPage";
 import ProposalsPage from "@/pages/activists/ProposalsPage";
 import TodoPage from "@/TodoPage";
-import Chat from "@/pages/community/components/Chat";
+import ChatPage from "@/pages/community/ChatPage";
 import ForumPage from "@/pages/community/ForumPage";
 import Resources from "@/Resources";
 import ProfilePage from "@/pages/profile/ProfilePage";
@@ -96,7 +96,7 @@ const App: React.FC = () => {
                             <Routes>
                                 <Route path="/" element={<HomePage/>}/>
                                 <Route path="/profile" element={<ProfilePage/>}/>
-                                <Route path="/chat" element={<Chat/>}/>
+                                <Route path="/chat" element={<ChatPage/>}/>
                                 <Route path="/fact-checks" element={<FactCheckPage/>}/>
                                 <Route path="/claims" element={<ClaimVerifierPage/>}/>
                                 <Route path="/progress" element={<ProgressPage/>}/>

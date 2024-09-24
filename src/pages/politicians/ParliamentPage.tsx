@@ -64,8 +64,8 @@ const ParliamentPage: React.FC = () => {
 
     return (
         <div>
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Members of Parliament</h1>
             <PoliticiansMenu/>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Members of Parliament</h1>
             <PrototypeDisclaimer/>
             <p className="text-xl text-gray-700">Get to know your MPs....</p>
             <ForceGraph2D

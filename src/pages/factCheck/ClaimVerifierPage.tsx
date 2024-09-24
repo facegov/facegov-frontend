@@ -88,8 +88,8 @@ const ClaimVerifierPage: React.FC = () => {
     );
     return (
         <div>
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Claim Verifier</h1>
             <FactCheckMenu/>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Claim Verifier</h1>
             <PrototypeDisclaimer/>
             <p className="mt-2">Use the search bar below to find specific claims or browse our
                 list of fact-checked statements. Each claim is accompanied by a verdict and a brief

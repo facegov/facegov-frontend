@@ -11,8 +11,8 @@ const FeaturedDiscussionPage: React.FC = () => {
     ]);
     return (
         <div>
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Forum</h1>
             <CommunityMenu/>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Forum</h1>
             <PrototypeDisclaimer/>
             <div>
                 <p className="mb-4">Join the conversation and shape the future of politics.</p>

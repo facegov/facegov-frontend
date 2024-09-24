@@ -7,7 +7,7 @@ import PoliticiansPage from '@/pages/politicians/PoliticiansPage';
 import CommunityPage from "@/pages/community/CommunityPage";
 import GetInvolvedPage from "@/pages/getInvolved/GetInvolvedPage";
 import AboutPage from "@/pages/AboutPage";
-import Feed from "@/pages/community/Feed";
+import Feed from "@/pages/community/components/Feed";
 import LoginPage from "@/pages/LoginPage";
 import TerritorialsGroupPage from "@/pages/activists/TerritorialsGroupPage";
 import ActivistsPage from "@/pages/activists/ActivistsPage";
@@ -21,9 +21,10 @@ import ProgressPage from "@/pages/factCheck/ProgressPage";
 import ClaimVerifierPage from "@/pages/factCheck/ClaimVerifierPage";
 import ProposalsPage from "@/pages/activists/ProposalsPage";
 import TodoPage from "@/TodoPage";
-import Chat from "@/pages/community/Chat";
+import Chat from "@/pages/community/components/Chat";
 import ForumPage from "@/pages/community/ForumPage";
 import Resources from "@/Resources";
+import ProfilePage from "@/pages/profile/ProfilePage";
 
 // Configure AWS SDK
 AWS.config.update({
@@ -94,6 +95,7 @@ const App: React.FC = () => {
                         <main className="w-full">
                             <Routes>
                                 <Route path="/" element={<HomePage/>}/>
+                                <Route path="/profile" element={<ProfilePage/>}/>
                                 <Route path="/chat" element={<Chat/>}/>
                                 <Route path="/fact-checks" element={<FactCheckPage/>}/>
                                 <Route path="/claims" element={<ClaimVerifierPage/>}/>

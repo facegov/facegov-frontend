@@ -5,8 +5,8 @@ import PoliticiansMenu from "@/pages/politicians/PoliticiansMenu";
 const PoliticiansPage: React.FC = () => {
     return (
        <div>
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Politicians</h1>
-            <PoliticiansMenu/>
+           <PoliticiansMenu/>
+           <h1 className="text-4xl font-bold text-blue-600 mb-4">Politicians</h1>
             <div className="mb-8 text-center text-gray-700">
                 Share your vision, address concerns, and collaborate with citizens to develop policies that truly reflect the
                 needs of your community. Transparency builds trust, and dialogue fosters progress. Use this space to

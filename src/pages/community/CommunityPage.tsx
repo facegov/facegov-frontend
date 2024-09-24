@@ -6,8 +6,8 @@ const CommunityPage: React.FC = () => {
 
     return (
         <div>
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Community</h1>
             <CommunityMenu/>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Community</h1>
             <div className="mb-8 text-center text-gray-700">
                 Initiate and engage in meaningful political discussions.
                 Whether you&apos;re passionate about local issues or global policies, this is your platform to share

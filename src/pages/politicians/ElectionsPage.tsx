@@ -35,8 +35,8 @@ const ElectionsPage: React.FC = () => {
 
     return (
         <div>
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Upcoming Election Information</h1>
             <PoliticiansMenu/>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Upcoming Election Information</h1>
             <PrototypeDisclaimer/>
 
             <p className="text-xl text-gray-700">Get to know the candidates... </p>

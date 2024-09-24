@@ -7,8 +7,8 @@ const FactCheckPage: React.FC = () => {
 
     return (
         <div>
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Fact Check</h1>
             <FactCheckMenu/>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Fact Check</h1>
             <div className="mb-8 text-center text-gray-700">
                 <p>Navigate the complex world of political claims and statements.
                     Fact Check aims to verify political assertions and

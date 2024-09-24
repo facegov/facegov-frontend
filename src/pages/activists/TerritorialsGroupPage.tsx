@@ -16,8 +16,8 @@ const TerritorialsGroupPage = () => {
 
     return (
         <div>
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Territorial Groups</h1>
             <ActivistsMenu/>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Territorial Groups</h1>
             <PrototypeDisclaimer/>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">

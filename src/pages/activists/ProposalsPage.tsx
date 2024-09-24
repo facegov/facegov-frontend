@@ -86,8 +86,8 @@ const LegislativeProposalsApp: React.FC = () => {
     return (
         <div>
 
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Legislative Proposals</h1>
             <ActivistsMenu/>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Legislative Proposals</h1>
             <PrototypeDisclaimer/>
             <form onSubmit={handleSubmit} className="mb-8 space-y-4">
                 <div className="flex gap-2">

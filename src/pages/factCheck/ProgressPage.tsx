@@ -9,8 +9,8 @@ const ProgressPage: React.FC = () => {
 
     return (
         <div>
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Policy Implementation Progress</h1>
             <FactCheckMenu/>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Policy Implementation Progress</h1>
             <PrototypeDisclaimer/>
             <PoliticalProgressChart/>
         </div>

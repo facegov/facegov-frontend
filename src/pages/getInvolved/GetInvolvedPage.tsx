@@ -1,5 +1,5 @@
 import React from 'react';
-import GetInvolvedForm from "@/pages/getInvolved/GetInvolvedForm";
+import GetInvolvedForm from "@/pages/getInvolved/components/GetInvolvedForm";
 import {useTranslation} from 'react-i18next';
 import RightSidebar from "@/components/RightSidebar";
 

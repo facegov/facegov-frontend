@@ -4,8 +4,8 @@ import ActivistsMenu from "@/pages/activists/ActivistsMenu";
 const ActivistsPage: React.FC = () => {
     return (
         <div>
-            <h1 className="text-4xl font-bold text-blue-600 mb-4">Activists</h1>
             <ActivistsMenu/>
+            <h1 className="text-4xl font-bold text-blue-600 mb-4">Activists</h1>
             <div className="mb-8 text-center text-gray-700">
                 This is your launchpad for grassroots political action. Here, you can
                 connect with like-minded individuals in your area, form local groups, and coordinate efforts to drive

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Icons from './Icons';
+import Icons from '../Icons';
+import InstallPWA from "@/components/menu/InstallPWA";
 
 const Menu: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -91,6 +92,7 @@ const Menu: React.FC = () => {
                                 Contact Us
                             </div>
                         </a>
+                        <InstallPWA/>
                     </div>
                 </div>
             )}

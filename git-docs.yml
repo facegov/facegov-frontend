@@ -1,0 +1,32 @@
+gitDocs:
+  name: Project A
+  type: Organization
+  description: My org descriptoin
+  publish:
+    enabled: true
+  specs:
+    - externalSpecs:
+        - name: Spec name
+          description: Spec description
+          owner: owner
+          serviceProvider:
+          publicationState:
+          type: REST
+          source:
+            externalUrl: http://test
+    - internalSpecs:
+        - name: Spec name
+          description: Spec description
+          owner: owner
+          serviceProvider:
+          publicationState:
+          type: REST
+          source:
+            externalUrl: http://test
+  nav:
+    parentRepoName: git-repo-name
+  externalLinks:
+    - groupName: Links group name
+      links:
+        - title: Link title
+          url: http://test

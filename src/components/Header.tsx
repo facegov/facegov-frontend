@@ -2,7 +2,7 @@ import React from 'react';
 import {ReactComponent as LogoIcon} from '@/logo.svg';
 import {Link} from 'react-router-dom';
 import NavigationBar from "@/components/NavigationBar";
-import Menu from "@/components/Menu";
+import Menu from "@/components/menu/Menu";
 
 
 const Header: React.FC = () => {

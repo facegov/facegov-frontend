@@ -21,6 +21,12 @@ const PoliticiansMenu: React.FC = () => (
                             <span className="mt-1">Members of Parliament</span>
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/canditates" className="flex flex-col items-center text-center">
+                            <Icons name="parliament"/>
+                            <span className="mt-1">Election Candidates</span>
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </Card>

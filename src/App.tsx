@@ -28,6 +28,7 @@ import TrendingPage from "@/pages/community/TrendingPage";
 import VotingPage from "@/pages/activists/VotingPage";
 import CandidatesPage from "@/pages/politicians/CandidatesPage";
 import GovernmentDashboard from "@/pages/politicians/parliament/GovernmentDashboard";
+import CandidateProfilePage from "@/pages/boarding/CandidateProfilePage";
 
 // Configure AWS SDK
 AWS.config.update({
@@ -120,6 +121,7 @@ const App: React.FC = () => {
                                 <Route path="/proposals" element={<ProposalsPage/>}/>
                                 <Route path="/canditates" element={<CandidatesPage/>}/>
                                 <Route path="/parliament" element={<GovernmentDashboard/>}/>
+                                <Route path="/addProfile" element={<CandidateProfilePage/>}/>
                                 <Route path="*" element={<Navigate to="/" replace/>}/>
                             </Routes>
                         </main>

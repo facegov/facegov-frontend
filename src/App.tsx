@@ -16,7 +16,6 @@ import i18n from './i18n';
 import AWS from 'aws-sdk';
 import {config} from "@/config";
 import ElectionsPage from "@/pages/politicians/ElectionsPage";
-import ParliamentPage from "@/pages/politicians/ParliamentPage";
 import ProgressPage from "@/pages/factCheck/ProgressPage";
 import ClaimVerifierPage from "@/pages/factCheck/ClaimVerifierPage";
 import ProposalsPage from "@/pages/activists/ProposalsPage";
@@ -28,6 +27,7 @@ import ProfilePage from "@/pages/profile/ProfilePage";
 import TrendingPage from "@/pages/community/TrendingPage";
 import VotingPage from "@/pages/activists/VotingPage";
 import CandidatesPage from "@/pages/politicians/CandidatesPage";
+import GovernmentDashboard from "@/pages/politicians/parliament/GovernmentDashboard";
 
 // Configure AWS SDK
 AWS.config.update({
@@ -106,7 +106,6 @@ const App: React.FC = () => {
                                 <Route path="/login" element={<LoginPage/>}/>
                                 <Route path="/politicians" element={<PoliticiansPage/>}/>
                                 <Route path="/elections" element={<ElectionsPage/>}/>
-                                <Route path="/parliament" element={<ParliamentPage/>}/>
                                 <Route path="/community" element={<CommunityPage/>}/>
                                 <Route path="/voting" element={<VotingPage/>}/>
                                 <Route path="/trending" element={<TrendingPage/>}/>
@@ -120,6 +119,7 @@ const App: React.FC = () => {
                                 <Route path="/groups" element={<TerritorialsGroupPage/>}/>
                                 <Route path="/proposals" element={<ProposalsPage/>}/>
                                 <Route path="/canditates" element={<CandidatesPage/>}/>
+                                <Route path="/parliament" element={<GovernmentDashboard/>}/>
                                 <Route path="*" element={<Navigate to="/" replace/>}/>
                             </Routes>
                         </main>

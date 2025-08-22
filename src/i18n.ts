@@ -7,23 +7,21 @@ i18n
         resources: {
             en: {
                 translation: {
-                    "gi-t": "Engaging in politics made easy!",
+                    "gi-t": "Make Your Vote Count Beyond Election Day!",
                     "gi-st": "Join FaceGov Open Source Project Below!",
                 }
             },
             es: {
                 translation: {
-                    "gi-t": "¡Participar en política hecho fácil!",
+                    "gi-t": "¡Haz que tu voto cuente más allá del día de las elecciones!",
                     "gi-st": "¡Únete al proyecto de Open Source abajo!",
                 }
             },
             it: {
                 translation: {
-                    "gi-t": "Semplifichiamo il modo di partecipare in politica!",
+                    "gi-t": "Fai contare il tuo voto oltre il giorno delle elezioni!",
                     "gi-st": "Unisciti al progetto Open Source qui sotto",
                 }
-
-
             }
         },
         lng: 'en', // Set default language
